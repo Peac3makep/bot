@@ -7,7 +7,7 @@ var prefix = '!'
 client.on('message', message => {
     if(message.author === client.user) return;
     if(message.content.startsWith(prefix + 'help')) {
-        message.channel.sendMessage(author + 'Ввести ХЕЛП');
+        message.channel.sendMessage('@here Ввести ХЕЛП');
      }
 });
 
