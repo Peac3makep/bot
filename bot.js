@@ -1,42 +1,19 @@
 const Discord = require('discord.js');
-
-const client = new Discord.Client();
-
-
-client.login('NDQ5Mjg5Mjk4NjQzMjU1Mjk3.DeiqQw.7ZoMYAvDeEOZp1GnqVD7CJ-iJzc');
-
-var prefix = '!'
+const holybot = new Discord.Client();
 
 
-
-// HELP
-client.on('message', message => {
-    if(message.author === client.user) return;
-    if(message.content.startsWith(prefix + 'help')) {
-        message.channel.sendMessage('@here Ввести ХЕЛП');
-     }
-});
+holybot.login("NDUwNjE1NjAwMzAyMTI5MTUy.De88OQ.7n08MAGKj4QLdYBvpLbGx3CBvF0");
 
 
-var Players=0;
-var author;
+holybot.on('message', (message) => {
+if(message.content == "!войти") 
+   message.reply("Вы зарегистрированы. ")
 
-// REGISTER
-client.on('message', message => {
-    if(message.author === client.user) return;
-    if(message.content.startsWith(prefix + 'register ' + promt(author)) && Players == 0 ) {
-    var Player1= author;
-    Players= 1;
+})
 
-    message.channel.sendMessage('Вы успешно зарегистрировались на матч');
-     }
-     if(message.content.startsWith(prefix + 'register ' + promt(author)) && Players == 1 ) {
-    var Player2= author;
-     Players= 2;
-     message.channel.sendMessage('Вы успешно зарегистрировались на матч');
-     }
-     if(message.content.startsWith(prefix + 'register ' + promt(author) )  && Players >= 2 ) {
-     message.channel.sendMessage('@here Превышено допустимое кол-во игроков, дождитесь окончания матча');
-     }
 
-});
+const commando = require('discord.js-commando');
+const holybot = new commando.Client();
+holybot.registry.registerGroup('random', 'Random');
+holybot.registrydefaults();
+holybot.registry.registerCommandsIn(__dirname + "/commands");
