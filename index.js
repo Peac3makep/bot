@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const holybot = new Discord.Client();
 
 
-holybot.login("NDUwNjE1NjAwMzAyMTI5MTUy.De88OQ.7n08MAGKj4QLdYBvpLbGx3CBvF0");
+holybot.login("NDQ5Mjg5Mjk4NjQzMjU1Mjk3.De_p3A.NYicxX4Voasl2eUk1ZdQtw4bIrc");
 
 
 holybot.on('message', (message) => {
